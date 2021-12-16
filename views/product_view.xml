@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <!-- product.template -->
+    <record id="is_product_template_form_view" model="ir.ui.view">
+        <field name="name">is.product.template.common.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+           <field name="active" position="after" >
+                <field name="is_htc" />
+                <field name="is_emplacement_stock" />
+                <field name="is_famille_id" />
+            </field>
+
+           <field name="description_purchase" position="before" >
+                <group col="4">
+                    <group>
+                        <field name="is_fournisseurs" />
+                    </group>
+                </group>
+            </field>
+
+        </field>
+    </record> 
+    <record id="is_product_template_tree_view" model="ir.ui.view">
+        <field name="name">is_product_template_tree_view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+           <field name="categ_id" position="after" >
+                <field name="uom_id" />
+                <field name="is_emplacement_stock" />
+            </field>
+        </field>
+    </record> 
+
+
+    <!-- is.famille -->
+    <record model="ir.ui.view" id="is_famille_tree_view">
+        <field name="name">is.famille.tree</field>
+        <field name="model">is.famille</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="is_famille_form_view">
+        <field name="name">is.famille.form</field>
+        <field name="model">is.famille</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="is_famille_action" model="ir.actions.act_window">
+        <field name="name">Famille article</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">is.famille</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem action="is_famille_action" id="is_famille_menu" parent="sale.menu_sale_config"  sequence="1"/>
+
+
+    </data>
+</openerp>

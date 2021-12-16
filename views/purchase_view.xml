@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- purchase.order.line -->
+        <!-- <record id="is_purchase_order_line_form" model="ir.ui.view">
+            <field name="name">is.purchase.order.line.form</field>
+            <field name="model">purchase.order.line</field>
+            <field name="inherit_id" ref="purchase.purchase_order_line_form"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="before">
+                    <field name="order_id" readonly="1" />
+                </field>
+            </field>
+        </record> -->
+        <record id="is_purchase_order_line_tree" model="ir.ui.view">
+            <field name="name">is_purchase_order_line_tree</field>
+            <field name="model">purchase.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Purchase Order Lines" create="false"  editable="top">
+                    <field name="order_id"       readonly="1" />
+                    <field name="name"           readonly="1" />
+                    <field name="partner_id"     readonly="1" string="Fournisseur"/>
+                    <field name="product_id"     readonly="1" />
+                    <field name="price_unit"     readonly="1" />
+                    <field name="product_qty"    readonly="1" />
+                    <field name="product_uom"    readonly="1" />
+                    <field name="price_subtotal" readonly="1" sum="Total"/>
+                    <field name="date_planned"  widget="date" width="135"  />
+                    <field name="state" />
+                    <!-- <field name="invoiced" /> -->
+                </tree>
+            </field>
+        </record>
+        <record id="is_purchase_order_line_graph_view" model="ir.ui.view">
+            <field name="name">is_purchase_order_line_graph_view</field>
+            <field name="model">purchase.order.line</field>
+            <field name="arch" type="xml">
+                <pivot string="view">
+                    <field name="partner_id"     type="row"/>
+                    <field name="date_planned"   type="col" interval="year"/>
+                    <field name="product_qty"    type="measure"/>
+                </pivot>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="is_purchase_order_line_acion">
+            <field name="name">Lignes des commandes</field>
+            <field name="res_model">purchase.order.line</field>
+            <field name="view_id" ref="is_purchase_order_line_tree"/>
+            <field name="view_mode">tree,form,pivot</field>
+        </record>
+        <menuitem id="is_purchase_order_line_menu" parent="purchase.menu_procurement_management" action="is_purchase_order_line_acion" sequence="7" />
+    </data>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <!-- res.partner -->
+        <record model="ir.ui.view" id="is_view_partner_form">
+            <field name="name">is_view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+               <field name="function" position="before">
+                    <field name="is_code_tiers_client"/>
+                    <field name="is_contact"/>
+                </field>
+            </field>
+        </record>   
+        <record model="ir.ui.view" id="is_view_partner_tree">
+            <field name="name">is_view_partner_tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="phone" position="before">
+                    <field name="is_contact"/>
+                </field>
+                <field name="email" position="after">
+                    <field name="city"/>
+                    <field name="country_id"/>
+                    <field name="is_code_tiers_client"/>
+                </field>
+
+            </field>
+        </record>   
+
+
+        <record id="account.res_partner_action_supplier" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>   
+        <record id="account.res_partner_action_customer" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>   
+
+        <record id="contacts.action_contacts" model="ir.actions.act_window">
+            <field name="view_mode">tree,kanban,form</field>
+        </record>   
+
+
+    </data>
+</openerp>
+

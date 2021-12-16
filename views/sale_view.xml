@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="is_view_order_line_tree2" model="ir.ui.view">
+            <field name="name">is.sale.order.line.tree</field>
+            <field name="model">sale.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Sales Order Lines" create="false"  editable="top">
+                    <field name="product_id" invisible="1"/>
+                    <field name="order_id"         readonly="True"/>
+                    <field name="order_partner_id" readonly="True"/>
+                    <field name="name"             readonly="True"/>
+                    <field name="product_uom_qty"  readonly="True"/>
+                    <field name="product_uom"      readonly="True"/>
+                    <field name="salesman_id"      readonly="True"/>
+                    <field name="price_subtotal"   readonly="True" sum="Total"/>
+                    <field name="state"            readonly="True"/>
+                    <field name="company_id" invisible="1"/>
+                    <!-- <field name="invoiced" readonly="True"/> -->
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="is_sale_order_line_acion">
+            <field name="name">Lignes des commandes</field>
+            <field name="res_model">sale.order.line</field>
+            <field name="view_id" ref="is_view_order_line_tree2"/>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="is_sale_order_line_menu" parent="sale.sale_order_menu" action="is_sale_order_line_acion" sequence="90" />
+    </data>
+</odoo>

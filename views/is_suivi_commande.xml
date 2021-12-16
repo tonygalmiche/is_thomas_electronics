@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="is_suivi_commande_tree_view" model="ir.ui.view">
+            <field name="name">is_suivi_commande_tree_view</field>
+            <field name="model">is.suivi.commande</field>
+            <field name="arch" type="xml">
+                <!-- colors="gray:remaining_qty == 0; red:remaining_qty &lt; 0; orange:remaining_qty &gt; 0" -->
+                <tree>   
+                    <field name="commitment_month" />
+                    <field name="partner_id" />
+                    <field name="product_id" />
+                    <field name="is_famille_id" />
+                    <field name="is_emplacement_stock" />
+                    <field name="client_order_ref" />
+                    <field name="product_uom_qty" />
+                    <field name="price_unit" />
+                    <field name="currency_id" />
+                    <!-- <field name="requested_date"  widget="date"/> -->
+                    <field name="commitment_date" widget="date"/>
+                    <field name="forecasted_turn_over" />
+                    <!-- <field name="shipped_qty" /> -->
+                    <!-- <field name="real_shipment_date"  widget="date" /> -->
+                    <!-- <field name="remaining_qty" /> -->
+                    <!-- <field name="turn_over_done" /> -->
+                    <field name="so" />
+                    <field name="mo" />
+                </tree>
+            </field>
+        </record>
+        <record id="is_suivi_commande_graph_view" model="ir.ui.view">
+            <field name="name">is_suivi_commande_graph_view</field>
+            <field name="model">is.suivi.commande</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="partner_id"  type="row"/>
+                    <field name="product_uom_qty" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+        <record id="is_suivi_commande_search_view" model="ir.ui.view">
+            <field name="name">is_suivi_commande_search_view</field>
+            <field name="model">is.suivi.commande</field>
+            <field name="arch" type="xml">
+                <search string="Recherche">
+                    <field name="commitment_month" />
+                    <field name="partner_id"/>
+                    <field name="product_id" />
+                </search>
+            </field>
+        </record>
+        <record id="is_suivi_commande_action" model="ir.actions.act_window">
+            <field name="name">Carnet de commandes</field>
+            <field name="res_model">is.suivi.commande</field>
+            <field name="view_mode">tree,pivot</field>
+        </record>
+
+        <menuitem 
+            id="is_suivi_commande_menu"
+            name="Carnet de commandes"
+            sequence="92" 
+            parent="sale.sale_order_menu" 
+            action="is_suivi_commande_action"   
+        />
+    </data>
+</odoo>

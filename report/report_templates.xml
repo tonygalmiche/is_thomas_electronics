@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <template id="is_external_layout_standard" inherit_id="web.external_layout_standard">
+        <xpath expr="//div[1]" position="replace">
+            <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+                <div class="row" style="font-size:11pt">
+                    <div class="col-8 text-center">
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-width: 100mm;"/>
+                        <div t-field="company.website" />
+                    </div>
+                    <div class="col-4" style="font-size:13pt;font-weight: normal;">
+                        <div t-field="company.street" /> 
+                        <div><span t-field="company.zip" /> <span t-field="company.city" /> <span t-field="company.country_id.name" /></div>
+                        <div>Phone <span t-field="company.phone" /></div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout" position="replace">
+            <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+                <div class="row zero_min_height">
+                    <div class="col-12">
+                        <div style="border-bottom: 1px solid black;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">  
+                        <span t-field="company.name" /> - <span t-field="company.ape" /> - SIRET : <span t-field="company.siret" /> - TVA : <span t-field="company.vat" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</odoo>
