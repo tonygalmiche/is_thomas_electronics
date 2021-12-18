@@ -26,6 +26,9 @@
                             </div>
                         </div>
                     </div>
+
+                    <div style="height:10mm"/>
+
                     <h2 style="font-size:18pt">Bon de livraison : <span t-field="o.name"/> du <span t-field="o.date_done"  t-options='{"format": "dd/MM/yyyy"}' /></h2>
                     <div>Référence commande client :  <strong><span t-field="o.sale_id.client_order_ref"/></strong></div>
                     <table class="table table-sm">

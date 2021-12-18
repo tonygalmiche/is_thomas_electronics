@@ -29,6 +29,9 @@
                 </div>
             </div>
 
+            <div style="height:10mm"/>
+
+
             <h2 t-if="o.state != 'draft'">Commande N°<span t-field="o.name"/></h2>
             <h2 t-if="o.state == 'draft'">Devis N°<span t-field="o.name"/></h2>
 
