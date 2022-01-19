@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <!-- mrp.workorder -->
+        <record id="is_mrp_production_workorder_tree_editable_view" model="ir.ui.view">
+            <field name="name">is_mrp_production_workorder_tree_editable_view</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_editable_view"/>
+            <field name="arch" type="xml">
+                <field name="duration_expected" position="replace">
+                    <field name="duration_expected" widget="float_time" sum="expected duration" optional="hide"/>
+                    <field name="is_duration_expected_heure" widget="float_time" sum="Total" optional="show"/>
+                </field>
+            </field>
+        </record>   
+    </data>
+</odoo>
+

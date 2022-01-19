@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
+    <template id="is_report_mrporder" name="is_report_mrporder" inherit_id="mrp.report_mrporder">
+        <xpath expr="//div[hasclass('page')]" position="replace">
+            <style>
+                .page{
+                    font-size:10pt;
+                }
+            </style>
+            <div class="page">
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Ordre de fabrication n° <span t-field="o.name"/></h2>
+                    </div>
+                </div>
+                <div style="height:7mm"/>
+                <div class="row mt32 mb32">
+                    <div class="col-4">
+                        <strong>Article:</strong><br/>
+                        <span t-field="o.product_id.code"/>
+                        <span t-field="o.product_id.name"/>
+                    </div>
+                    <div class="col-2">
+                        <strong>Quantité:</strong><br/>
+                        <span t-field="o.product_qty"/>
+                        <span t-field="o.product_uom.name" groups="product.group_uom"/>
+                    </div>
+                    <div class="col-3">
+                        <strong>Date planifiée:</strong><br/>
+                        <span t-field="o.date_planned_start" t-options='{"format": "dd/MM/yyyy"}' />
+                    </div>
+                    <div class="col-3">
+                        <strong>Date d'impression:</strong><br/>
+                        <span t-esc="time.strftime('%d/%m/%Y')"/>
+                    </div>
+                </div>
+                <div style="height:7mm"/>
+                <div t-if="o.workorder_ids" groups="mrp.group_mrp_routings">
+                    <h3>Ordres de travail</h3>
+                    <table class="table table-sm">
+                        <tr>
+                            <th class="text-center"><strong>Séquence</strong></th>
+                            <th class="text-left"><strong>Description</strong></th>
+                            <th class="text-left"><strong>Poste de charge</strong></th>
+                            <th class="text-right"><strong>Nb minutes</strong></th>
+                        </tr>
+                        <t t-set="total" t-value="0"/>
+                        <tr t-foreach="o.workorder_ids" t-as="line2">
+                            <t t-set="total" t-value="total+line2.is_duration_expected_heure"/>
+                            <td class="text-center"><span t-field="line2.operation_id.sequence"/></td>
+                            <td class="text-left"><span t-field="line2.name"/></td>
+                            <td class="text-left"><span t-field="line2.workcenter_id.name"/></td>
+                            <td class="text-right"><span t-field="line2.is_duration_expected_heure" t-options='{"widget": "float_time"}'/></td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="3"><strong>Total : </strong></td>
+                            <td class="text-right"><strong><span t-esc='total' t-options='{"widget": "float_time"}'/></strong></td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>Nomenclature</h3>
+                <table class="table table-sm" t-if="o.bom_id">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Désignation</th>
+                            <th class="text-right">Qt unitaire</th>
+                            <th class="text-right">Qt totale</th>
+                            <th>Unité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.bom_id.bom_line_ids" t-as="line">
+                            <t t-set="total" t-value="line.product_qty*o.product_qty"/>
+                            <td><span t-field="line.product_id.name"/></td>
+                            <td><span t-field="line.product_id.code"/></td>
+                            <td class="text-right"><span t-field="line.product_qty"/></td>
+                            <td class="text-right"><span t-esc="total" t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/></td>
+                            <td><span t-field="line.product_uom_id"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                <!-- <h3 t-if="o.move_raw_ids">
+                    <span t-if="o.state == 'done'">
+                        Consumed Products
+                    </span>
+                    <span t-else="">
+                        Products to Consume
+                    </span>
+                </h3>
+
+                <table class="table table-sm" t-if="o.move_raw_ids">
+                    <t t-set="has_product_barcode" t-value="any(m.product_id.barcode for m in o.move_raw_ids)"/>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">Quantité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-if="o.move_raw_ids">
+                            <tr t-foreach="o.move_raw_ids" t-as="raw_line">
+                                <td>
+                                    <span t-field="raw_line.product_id"/>
+                                </td>
+                                <td t-attf-class="{{ 'text-right' if not has_product_barcode else '' }}">
+                                    <span t-field="raw_line.product_uom_qty"/>
+                                    <span t-field="raw_line.product_uom" groups="uom.group_uom"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table> -->
+                <div class="oe_structure"/>
+            </div>
+        </xpath>
+    </template>
+
+
+
+<!-- 
 
 <template id="is_report_mrporder" name="is_report_mrporder" inherit_id="mrp.report_mrporder">
     <xpath expr="//div[@class='page']" position="replace">
@@ -57,7 +180,6 @@
                     <t t-set="total" t-value="0"/>
                     <tr t-foreach="o.workcenter_lines" t-as="line2">
                         <t t-set="total" t-value="total+line2.hour"/>
-                        <!--<td class="text-right"><span t-esc='total'/></td>-->
                         <td class="text-center"><span t-field="line2.sequence"/></td>
                         <td class="text-left"><span t-field="line2.name"/></td>
                         <td class="text-center"><span t-field="line2.workcenter_id.name"/></td>
@@ -102,35 +224,11 @@
                             </td>
                         </tr>
                     </t>
-                    <!--
-                    <t t-if="o.move_lines2">
-                        <tr>
-                            <td colspan="4"><strong>Consumed Products</strong></td>
-                        </tr>
-                        <tr t-foreach="o.move_lines2" t-as="line2">>
-                            <td>
-                                <span t-field="line2.product_id.code"/>
-                                <span t-field="line2.product_id.name"/>
-                            </td>
-                            <td class="text-right">
-                                <span t-field="line2.product_uom_qty"/>
-                                <span t-field="line2.product_uom.name"/>
-                            </td>
-                            <td class="text-center" groups="stock.group_locations">
-                                <span t-field="line2.location_id.name"/>
-                            </td>
-                            <td class="text-center" groups="stock.group_locations">
-                                <span t-field="line2.location_dest_id.name"/>
-                            </td>
-                        </tr>
-                    </t>
-                    -->
                 </tbody>
             </table>
             <div class="oe_structure"/>
         </div>
     </xpath>
-</template>
+</template> -->
 
-</data>
-</openerp>
+</odoo>

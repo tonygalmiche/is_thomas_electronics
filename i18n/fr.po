@@ -1,0 +1,548 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* is_thomas_electronics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-17 07:45+0000\n"
+"PO-Revision-Date: 2022-01-17 08:50+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fr\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_external_layout_standard
+msgid "- SIRET :"
+msgstr "- SIRET :"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_external_layout_standard
+msgid "- TVA :"
+msgstr "- TVA :"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<b>Total :              </b>"
+msgstr "<b>Total :              </b>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<b>Total Without Taxes :</b>"
+msgstr "<b>Total HT :</b>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Amount</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Amount</span>"
+msgstr ""
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">Montant</span>\n"
+"                                    <span groups=\"account.group_show_line_subtotals_tax_included\">Montant</span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<span><strong>Delivery Address:</strong></span>"
+msgstr "<span><strong>Adresse de livraison:</strong></span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<span><strong>Vendor Address:</strong></span>"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<span><strong>Warehouse Address:</strong></span>"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<span>Description</span>"
+msgstr "<span>Description</span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<span>Disc.%</span>"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<span>Taxes</span>"
+msgstr "<span>TVA</span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<span>Unit Price</span>"
+msgstr "<span>Prix unitaire</span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<span>quantity</span>"
+msgstr "<span>Quantité</span>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong class=\"mr16\">Sub-total</strong>"
+msgstr "<strong class=\"mr16\">Sous-total</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<strong>Code</strong>"
+msgstr "<strong>Code</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Comment:</strong>"
+msgstr "<strong>Commentaire:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Customer order:</strong>"
+msgstr "<strong>Commande Client:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Date Req.</strong>"
+msgstr "<strong>Date prévue</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>Description</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Invoice Date:</strong>"
+msgstr "<strong>Date de facture:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Net Price</strong>"
+msgstr "<strong>Prix net</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Order Date:</strong>"
+msgstr "<strong>Date de la commande:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Origine:</strong>"
+msgstr "<strong>Origine:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Our order:</strong>"
+msgstr "<strong>Notre commande:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Payment Term:</strong>"
+msgstr "<strong>Conditions de règlement:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Payment date:</strong>"
+msgstr "<strong>Date de règlement:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<strong>Product</strong>"
+msgstr "<strong>Article</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Qty</strong>"
+msgstr "<strong>Qt</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>Quantité</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_purchase_stock_report_purchaseorder_document
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>Adresse de livraison:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "<strong>Signature:</strong>"
+msgstr "<strong>Signature:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>TVA</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Total Without Taxes</strong>"
+msgstr "<strong>Total HT</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>Prix unitaire</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Validated By:</strong>"
+msgstr "<strong>Contact:</strong>"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "<strong>Your quote:</strong>"
+msgstr "<strong>Votre devis:</strong>"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_account_bank_statement_line__is_partner_liv_id
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_account_move__is_partner_liv_id
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_account_payment__is_partner_liv_id
+msgid "Adresse de livraison"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Cancelled Invoice"
+msgstr "Facture annulée"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Cancelled Purchase Order #"
+msgstr "Facture fournisseur annulée N°"
+
+#. module: is_thomas_electronics
+#: model:ir.actions.act_window,name:is_thomas_electronics.is_suivi_commande_action
+#: model:ir.ui.menu,name:is_thomas_electronics.is_suivi_commande_menu
+msgid "Carnet de commandes"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,help:is_thomas_electronics.field_product_product__is_htc
+#: model:ir.model.fields,help:is_thomas_electronics.field_product_template__is_htc
+msgid "Code douanier"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_res_partner__is_code_tiers_client
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_res_users__is_code_tiers_client
+msgid "Code tiers client"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Contact :"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_res_partner__is_contact
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_res_users__is_contact
+msgid "Contact principal"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Credit Note"
+msgstr "Avoir"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "Customer Reference :"
+msgstr "Référence commande client"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Delivery address :"
+msgstr "Adresse de livraison"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__display_name
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Draft Invoice"
+msgstr "Facture brouillon"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_product__is_emplacement_stock
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_template__is_emplacement_stock
+msgid "Emplacement de stock"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,help:is_thomas_electronics.field_product_product__is_emplacement_stock
+#: model:ir.model.fields,help:is_thomas_electronics.field_product_template__is_emplacement_stock
+msgid "Emplacement de stock par défaut pour cet article"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_is_famille
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__name
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_product__is_famille_id
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_template__is_famille_id
+msgid "Famille"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.actions.act_window,name:is_thomas_electronics.is_famille_action
+#: model:ir.ui.menu,name:is_thomas_electronics.is_famille_menu
+msgid "Famille article"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__is_famille_id
+msgid "Family"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__forecasted_turn_over
+msgid "Forecasted Turn over"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_purchase_order_line_tree
+msgid "Fournisseur"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_product__is_fournisseurs
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_template__is_fournisseurs
+msgid "Fournisseurs (pour info)"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_product__is_htc
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_product_template__is_htc
+msgid "HTC"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__id
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__id
+msgid "ID"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Invoice address :"
+msgstr "Adresse de facturation :"
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille____last_update
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_famille__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.actions.act_window,name:is_thomas_electronics.is_purchase_order_line_acion
+#: model:ir.actions.act_window,name:is_thomas_electronics.is_sale_order_line_acion
+#: model:ir.ui.menu,name:is_thomas_electronics.is_purchase_order_line_menu
+#: model:ir.ui.menu,name:is_thomas_electronics.is_sale_order_line_menu
+msgid "Lignes des commandes"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__is_emplacement_stock
+msgid "Location"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__mo
+msgid "MO"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__client_order_ref
+msgid "PO number"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_delivery_document
+msgid "Packing List :"
+msgstr "Bon de livraison :"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_external_layout_standard
+msgid "Phone"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_product_product
+msgid "Product"
+msgstr "Article"
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Purchase Order #"
+msgstr "Commande N°"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_purchase_order_line_tree
+msgid "Purchase Order Lines"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__product_uom_qty
+msgid "Qty"
+msgstr "Qt"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_suivi_commande_search_view
+msgid "Recherche"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__product_id
+msgid "Ref."
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Request for Quotation #"
+msgstr "Demande de prix N°"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__so
+msgid "SO"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_view_order_line_tree2
+msgid "Sales Order Lines"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Sandra PERNOUX"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__commitment_date
+msgid "Shipment date accepted"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__commitment_month
+msgid "Shipment month accepted"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Signature : <br/>"
+msgstr "Signature : <br/>"
+
+#. module: is_thomas_electronics
+#: model:ir.model,name:is_thomas_electronics.model_is_suivi_commande
+msgid "Suivi commande"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "TIN:"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_purchaseorder_document
+msgid "Taxes"
+msgstr "TVA"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Taxes :"
+msgstr "TVA:"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_purchase_order_line_tree
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_view_order_line_tree2
+msgid "Total"
+msgstr "Total"
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__price_unit
+msgid "Unit price"
+msgstr "Prix unitaire"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Vendor Bill"
+msgstr "Vendeur"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_report_invoice_document
+msgid "Vendor Credit Note"
+msgstr "Avoir"
+
+#. module: is_thomas_electronics
+#: model_terms:ir.ui.view,arch_db:is_thomas_electronics.is_purchase_order_line_graph_view
+msgid "view"
+msgstr ""
+
+#. module: is_thomas_electronics
+#: model:ir.model.fields,field_description:is_thomas_electronics.field_is_suivi_commande__state
+msgid "État"
+msgstr ""
