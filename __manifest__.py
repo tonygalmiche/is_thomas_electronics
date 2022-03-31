@@ -27,9 +27,9 @@ InfoSaône - Module Odoo 15 pour Thomas Electronics
     "init_xml" : [],
     "demo_xml" : [],
     "data" : [
+        "views/account_move_view.xml",
         "views/mrp_view.xml",
         "views/product_view.xml",
-        # "views/report_mrpbomstructure.xml",
         "views/partner_view.xml",
         "views/sale_view.xml",
         "views/purchase_view.xml",

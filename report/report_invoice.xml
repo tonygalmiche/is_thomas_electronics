@@ -39,9 +39,13 @@
                     </h2>
                     <div style="height:7mm"/>
                     <div class="row">
-                        <div class="col-3" t-if="o.name">
+                        <div class="col-3" t-if="o.is_sale_id.client_order_ref">
                             <strong>Customer order:</strong>
-                            <p t-field="o.is_client_order_ref"/>
+                            <p t-field="o.is_sale_id.client_order_ref"/>
+                        </div>
+                        <div class="col-3" t-if="o.ref">
+                            <strong>Ref:</strong>
+                            <p t-field="o.ref"/>
                         </div>
                         <div class="col-3" t-if="o.invoice_date">
                             <strong>Invoice Date:</strong>

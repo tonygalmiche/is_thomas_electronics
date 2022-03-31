@@ -14,17 +14,18 @@ class account_move(models.Model):
 
 
     @api.depends('invoice_line_ids')
-    def _compute_is_client_order_ref(self):
+    def _compute_is_sale_id(self):
         for obj in self:
-            ref = False
+            sale_id = False
             for invoice_line in obj.invoice_line_ids:
                 for line in invoice_line.sale_line_ids:
-                    ref=line.order_id.client_order_ref
-            obj.is_client_order_ref = ref
+                    sale_id=line.order_id.id
+            obj.is_sale_id = sale_id
 
 
     is_partner_liv_id   = fields.Many2one('res.partner', string='Adresse de livraison', compute='_compute_is_partner_liv_id')
-    is_client_order_ref = fields.Char(string='Référence commande client', compute='_compute_is_client_order_ref')
+    is_sale_id          = fields.Many2one('sale.order', string='Commande client', compute='_compute_is_sale_id')
+    #is_client_order_ref = fields.Char(string='Référence commande client', compute='_compute_is_client_order_ref')
 
 
 

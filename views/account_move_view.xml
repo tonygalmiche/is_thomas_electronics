@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="is_view_move_form">
+            <field name="name">is_view_move_form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+               <field name="ref" position="replace"/>
+               <field name="payment_reference" position="after">
+                    <field name="is_sale_id" attrs="{'invisible': [('is_sale_id', '=', False)]}"/>
+                    <field name="ref"/>
+                </field>
+            </field>
+        </record>   
+    </data>
+</odoo>
