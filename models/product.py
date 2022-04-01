@@ -10,6 +10,7 @@ class product_template(models.Model):
     is_emplacement_stock = fields.Char("Emplacement de stock", help="Emplacement de stock par défaut pour cet article")
     is_famille_id        = fields.Many2one("is.famille", "Famille", required=False)
     is_fournisseurs      = fields.Char("Fournisseurs (pour info)")
+    is_currency_id       = fields.Many2one('res.currency', 'Devise', default=1)
 
 
 class product_product(models.Model):
