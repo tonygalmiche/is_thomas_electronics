@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
     <data>
         <!-- mrp.workorder -->
@@ -14,6 +13,94 @@
                 </field>
             </field>
         </record>   
+
+    
+        <!-- is.pointage.heure -->
+        <record model="ir.ui.view" id="is_pointage_heure_tree_view">
+            <field name="name">is.pointage.heure.tree</field>
+            <field name="model">is.pointage.heure</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_creation"/>
+                    <field name="user_id"/>
+                    <field name="production_id" widget="many2one"/>
+                    <field name="operation_id"  widget="many2one"/>
+                    <field name="temps_passe" sum="Total" widget="float_time"/>
+                    <field name="temps_passe_total" sum="Total" widget="float_time"/>
+                    <field name="temps_prevu" sum="Total" widget="float_time"/>
+                    <field name="commentaire"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="is_pointage_heure_form_view">
+            <field name="name">is.pointage.heure.form</field>
+            <field name="model">is.pointage.heure</field>
+            <field name="arch" type="xml">
+                <form>
+                    <style>
+                        .o_form_label{
+                            white-space: nowrap;
+                        }
+                    </style>
+                    <sheet>
+                        <group>
+                            <field name="date_creation"/>
+                            <field name="user_id" widget="selection"/>
+                            <field name="production_id"/>
+                            <field name="operation_id" domain="[('production_id','=',production_id)]" widget="selection"/>
+                            <field name="temps_passe" widget="float_time"/>
+                            <field name="temps_passe_total" sum="Total" widget="float_time"/>
+                            <field name="temps_prevu" widget="float_time"/>
+                            <field name="commentaire"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="is_pointage_heure_form_pivot_view" model="ir.ui.view">
+            <field name="name">is_pointage_heure_form_pivot_view</field>
+            <field name="model">is.pointage.heure</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="production_id" type="row"/>
+                    <field name="operation_id"  type="row"/>
+                    <field name="temps_passe"   type="measure"/>
+                </pivot>
+            </field>
+        </record>
+        <record id="is_pointage_heure_form_graph_view" model="ir.ui.view">
+            <field name="name">is_pointage_heure_form_graph_view</field>
+            <field name="model">is.pointage.heure</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="production_id" type="row"/>
+                    <field name="operation_id"  type="row"/>
+                    <field name="temps_passe"   type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+
+
+        <record id="is_pointage_heure_search_view" model="ir.ui.view">
+            <field name="name">is_pointage_heure_search_view</field>
+            <field name="model">is.pointage.heure</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="user_id"/>
+                    <field name="production_id"/>
+                    <field name="operation_id"/>
+                    <field name="commentaire"/>
+                </search>
+            </field>
+        </record>
+        <record id="is_pointage_heure_action" model="ir.actions.act_window">
+            <field name="name">Pointage des heures</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">is.pointage.heure</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+        </record>
+        <menuitem action="is_pointage_heure_action" id="is_pointage_heure_menu" parent="mrp.menu_mrp_root"  sequence="11"/>
     </data>
 </odoo>
-

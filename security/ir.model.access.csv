@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_is_famille,access_is_famille,model_is_famille,sales_team.group_sale_manager,1,1,1,1
 access_is_suivi_commande,access_is_suivi_commande,model_is_suivi_commande,sales_team.group_sale_manager,1,1,1,1
-
+access_is_pointage_heure,access_is_pointage_heure,model_is_pointage_heure,base.group_user,1,1,1,1
